@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>主頁</title>
+    <script src="http://tool.oschina.net/js/jquery/jquery-1.7.2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="script/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="bg">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-0 fixed-top" id="bar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home" ><img src="images/PORTFOLI text .png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav " id="buttons">
+                    <li class="nav-item ">
+                        <a class="nav-link demo  px-2" href="#about"><img src="images/about us text.png"></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link demo1 pe-3 ps-4" href="#Tony1"><img src="images/( Tony_).png"></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link demo2 px-3" href="#Eva1"><img src="images/( Eva_).png"></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link demo3 px-3" href="#Louis1"><img src="images/( louis_).png"></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link demo4 px-3" href="#Allen1"><img src="images/( Allen_).png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+  
+
+
+
+
+
+    <div class="container ">
+
+
+        <div class="row text-center "id="day">
+            <div class="col-12 my-5">
+                
+            </div>
+            <div class="col-3">
+                
+            </div>
+            <div class="col-6 p-0 mt-5">
+                <img src="images/顯示時間 時鐘頁面/clock.png" class="d-block img-fluid " id="butto">
+            </div>
+            <div class="col-3">
+                
+            </div>
+            <div class="col-5">
+                
+            </div>
+            <div class="col-2 mt-4">
+                <img src="images/顯示時間 時鐘頁面/today text.png" class="d-block img-fluid mx-auto">
+            </div>
+            <div class="col-5">
+                
+            </div>
+            <div class="col-4">
+                
+            </div>
+            <div class="col-4 mt-2 ">
+                <h1  id="to"></h1>
+            </div>
+            <div class="col-4">
+                
+            </div>
+
+        </div>
+        <video id="vid" class="mw-100 h-auto mt-2">
+            <!--影片-->
+            <source src="videos/video.mp4" type="video/mp4">
+        </video>
+        <div class="row text-center  preloader   mt-5">
+            <div class="col-12 my-5 status ">
+              
+            </div>
+            <div class="col-12 my-5 status ">
+              
+            </div>
+            <div class="col-2 status">
+                
+            </div>
+            <div class="col-8 mb-5 status ">
+                <img src="images/portfoli text.png" class=" d-block img-fluid mx-auto ">
+            </div>
+            <div class="col-2 status">
+                
+            </div>
+            <div class="col-12 my-5 status ">
+              
+            </div>
+            <div class="col-4 status">
+                
+            </div>
+            <div class="col-4   mb-3 status px-5">
+                <img src="images/loading text.png" class=" d-block img-fluid mx-auto ">
+            </div>
+            <div class="col-4 status">
+                
+            </div>
+            <div class="col-4 status">
+                
+            </div>
+            <div class="col-4 status p-0">
+                <img src="images/Loading-ani.gif" class=" d-block img-fluid mx-auto">
+            </div>
+            <div class="col-4 status">
+                
+            </div>
+        </div>
+
+
+
+        <div class="row main" id="home">
+            <div class="col-12 p-0 mt-4">
+                <div>
+                    <img src="images/img.png" class="d-block img-fluid mt-3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="Tony" class="main">
+        <div class="container">
+            <div class="row  text-center  m-3 align-items-end">
+                <div class="col-12 my-5" id="Tony1">
+
+                </div>
+                <div class="col-lg-6 col-md-12 ">
+                    <img src="images/個人作品區/秉宏/人.png" class="d-block img-fluid mx-auto">
+                </div>
+                <div class="col-lg-6 col-md-12 ">
+                    <img src="images/個人作品區/秉宏/字.png" class="d-block img-fluid mx-auto">
+                </div>
+            </div>
+
+            <div class="row  my-3 mx-5 p-2 align-items-end" v-for="item in Tonys">
+                <div class="col-lg-8 col-md-12 ">
+                    <img :src="item.img" alt="image" class="d-block img-fluid mx-auto">
+                </div>
+                <div class="col-lg-4 col-md-12 pt-2">
+                    <h1>{{item.fields.作品名稱}}</h1>
+                    <h5>{{item.fields.作品簡介}}</h5>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="Eva" class="main">
+        <div class="container ">     
+            <div class="row  text-center m-3 align-items-center">
+                <div class="col-12 my-5" id="Eva1">
+
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <img src="images/個人作品區/力心/字.png" class="d-block img-fluid mx-auto">
+                </div>
+                <div class="col-lg-6 col-md-12 ">
+                    <img src="images/個人作品區/力心/人.png" class="d-block img-fluid mx-auto">
+                </div>
+            </div>
+
+            <div class="row  my-3 mx-5 p-1 align-items-end" v-for="item in Evas">
+                <div class="col-lg-4 col-md-12 pt-2">
+                    <h1 class="text-lg-end text-md-start">{{item.fields.作品名稱}}</h1>
+                    <h5>{{item.fields.作品簡介}}</h5>
+                </div>
+                <div class="col-lg-8 col-md-12 ">
+                    <img :src="item.img" alt="image" class="d-block img-fluid mx-auto">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="Louis" class="main">
+        <div class="container">
+            <div class="row text-center m-3 align-items-center">
+                <div class="col-12 my-5" id="Louis1">
+
+                </div>
+                <div class="col-lg-6 col-md-12 ">
+                    <img src="images/個人作品區/以樂/人.png" class="d-block img-fluid mx-auto">
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <img src="images/個人作品區/以樂/字.png" class="d-block img-fluid mx-auto">
+                </div>
+            </div>
+
+            <div class="row my-3 mx-5 p-1 align-items-end" v-for="item in Louiss">
+                <div class="col-lg-8 col-md-12 ">
+                    <img :src="item.img" alt="image" class="d-block img-fluid mx-auto">
+                </div>
+                <div class="col-lg-4 col-md-12 pt-2">
+                    <h1>{{item.fields.作品名稱}}</h1>
+                    <h5>{{item.fields.作品簡介}}</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Allen" class="main">
+        <div class="container">
+            <div class="row  text-center m-3 align-items-center">
+                <div class="col-12 my-5" id="Allen1">
+
+                </div>
+                <div class="col-lg-6 col-md-12 ">
+                    <img src="images/個人作品區/瀚雲/字.png" class="d-block img-fluid mx-auto">
+                </div>
+                <div class="col-lg-6 col-md-12 ">
+                    <img src="images/個人作品區/瀚雲/人.png" class="d-block img-fluid mx-auto">
+                </div>
+            </div>
+
+            <div class="row  my-3 mx-5 p-1 align-items-end" v-for="item in Allens">
+                <div class="col-lg-4 col-md-12 pt-2">
+                    <h1 class="text-lg-end text-md-start">{{item.fields.作品名稱}}</h1>
+                    <h5>{{item.fields.作品簡介}}</h5>
+                </div>
+                <div class="col-lg-8 col-md-12 ">
+                    <img :src="item.img" alt="image" class="d-block img-fluid mx-auto">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="main">
+        <div class="container">
+            <div class="row text-center  p-5">
+                <div class="col-lg-3 col-md-6 px-5 py-3">
+                    <img src="images/分工/瀚雲.png" alt="image" class="d-block img-fluid mx-auto">
+                </div>
+                <div class="col-lg-3 col-md-6 px-5 py-3">
+                    <img src="images/分工/以樂.png" alt="image" class="d-block img-fluid mx-auto">
+                </div>
+                <div class="col-lg-3 col-md-6 px-5 py-3">
+                    <img src="images/分工/力心.png" alt="image" class="d-block img-fluid mx-auto">
+                </div>
+                <div class="col-lg-3 col-md-6 px-5 py-3">
+                    <img src="images/分工/秉宏.png" alt="image" class="d-block img-fluid mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var Today = new Date();  //按鈕顯示日期
+        // document.write("今天日期是 " + Today.getFullYear() + " 年 " + (Today.getMonth() + 1) + " 月 " + Today.getDate() + " 日");
+        // document.getElementById('butto').value = Today.getFullYear() + '/' + (Today.getMonth() + 1) + '/' + Today.getDate();
+        document.getElementById('to').innerHTML = Today.getFullYear() + '.' + (Today.getMonth() + 1) + '.' + Today.getDate();
+
+        // function videoPlayback() {
+        //     var vide = document.getElementById("vid1");
+        //     //給視訊標籤新增快取播放---video標籤屬性。
+        //     vide.setAttribute("autoplay", "autoplay");
+        //     //給視訊標籤新增迴圈播放---video標籤屬性。
+        //     vide.setAttribute("loop", "loop");
+        //     //播放視訊
+        //     vide.play();
+        // }
+
+        // //滑鼠離開
+        // function videoStopped() {
+        //     //獲取視訊標籤
+        //     var Div1 = document.getElementById("vid1");
+        //     //停止播放
+        //     Div1.pause();
+        //     Div1.currentTime = 0;
+        // }
+
+        $(window).load(function () { // 確認整個頁面讀取完畢再將這三個div隱藏起來
+            $(".status").delay(5000).fadeOut(2000); //delay --> 延遲幾秒才fadeOut
+            $(".preloader").delay(7000).fadeOut(2000);
+            $("#day").delay(6800).fadeIn(2000);
+        })
+
+        $("#day").hide();
+        $("#bar").hide();
+        $("#vid").hide();
+        $(".main").hide(0);
+        $("#butto").click(function () {
+            var video = document.getElementById("vid");
+            video.play();
+            $("#day").hide();
+            $("#vid").show().delay(19000).fadeOut(2000);
+            $(".main").delay(20000).fadeIn(2000);
+            $("#bar").delay(21000).fadeIn(2000);
+        });
+
+
+
+        //抓資料
+        var Tony = new Vue({
+            el: "#Tony",
+            data: {
+                Tonys: []
+            }
+        })
+        $.ajax({
+            url: "/users",
+            method: "get",
+            dataType: "json",
+            success: function (users) {
+                Tony.Tonys = users;
+            }
+        })
+
+        var Eva = new Vue({
+            el: "#Eva",
+            data: {
+                Evas: []
+            }
+        })
+        $.ajax({
+            url: "/users1",
+            method: "get",
+            dataType: "json",
+            success: function (users) {
+                Eva.Evas = users;
+            }
+        })
+
+        var Louis = new Vue({
+            el: "#Louis",
+            data: {
+                Louiss: []
+            }
+        })
+        $.ajax({
+            url: "/users2",
+            method: "get",
+            dataType: "json",
+            success: function (users) {
+                Louis.Louiss = users;
+            }
+        })
+
+        var Allen = new Vue({
+            el: "#Allen",
+            data: {
+                Allens: []
+            }
+        })
+        $.ajax({
+            url: "/users3",
+            method: "get",
+            dataType: "json",
+            success: function (users) {
+                Allen.Allens = users;
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+
+.demo:hover {
+	/* width: 200px; */
+    height: 63px;
+	background-image:url("images/hover/about\ us.png");
+	align-items: center;
+	display: flex; 
+}
+.demo1:hover {
+	height: 63px;
+	background-image:url("images/hover/tony.png");
+	align-items: center;
+	display: flex; 
+}
+.demo2:hover {
+	height: 63px;
+	background-image:url("images/hover/eva.png");
+	align-items: center;
+	display: flex; 
+}
+.demo3:hover {
+	height: 63px;
+	background-image:url("images/hover/louis.png");
+	align-items: center;
+	display: flex; 
+}
+.demo4:hover {
+	height: 63px;
+	background-image:url("images/hover/allen.png");
+	align-items: center;
+	display: flex; 
+}
+nav ul{
+	align-items: center;
+	display: flex;
+}
+nav {
+	background-image:url("images/hover/background.png");
+	background-size:cover;
+	background-position: right;
+}
+.bg{
+	background-image:url("images/background.png");
+	
+}
+#to{
+	font-family: INVASION2000, serif;
+	color: #d0822e;
+	font-size: 50px;
+}
+#butto:hover {
+	opacity: 0.5;
+}
+
+#Tony h1,#Tony h5,#Eva h1,#Eva h5 ,#Louis h1,#Louis h5 ,#Allen h1 ,#Allen h5 {
+	font-family:GBK ,serif;
+	color: #333333;
+}
+#about{
+	background-image:url("images/分工/background.png");	
+}
+
+@font-face {
+	font-family: INVASION2000;    /*自定義字體名稱*/
+	src: url(字體/2/INVASION2000.TTF);   /*抓取字體資料夾裡的INVASION2000.ttf檔案*/  /*文件的相對位置*/
+}
+@font-face {
+	font-family: GBK;    /*自定義字體名稱*/
+	src: url(字體/方正跃进体_GBK.ttf);   /*抓取字體資料夾裡的setofont.ttf檔案*/  /*文件的相對位置*/
+}
+html{
+	cursor:url("images/mouse/mouse.png"), pointer;
+}
+/*h1 { font-family: setofont, serif; }  會優先選setofont字體，如果不支援會顯示第二字體 serif*/
